@@ -13,43 +13,44 @@ class Graph:
         if u not in self.gr:
             self.gr[u] = []
         self.gr[u].append(v)
+    
+    def tarjan(self):
+        index = 1
+        ans = []
+        st = deque()
+        indexes = defaultdict(int)
+        lowlinks = defaultdict(int)
+        in_stack = defaultdict(int)
+        
+        def dfs(v):
+            nonlocal index
 
-    def find_strong_connected_tarjan(self) -> list[list[int]]:
-        stack = []
-        indexes = defaultdict(lambda: 0)
-        lowlinks = defaultdict(lambda: 0)
-        in_stack = defaultdict(lambda: False)
-        scc = []
-        strong_components = []
+            st.append(v)
+            indexes[v] = index
+            lowlinks[v] = index
+            index += 1
+            in_stack[v] = 1
 
-        def strong_connect(vertex):
-            indexes[vertex], lowlinks[vertex] = len(indexes), len(indexes)
-            stack.append(vertex)
-            in_stack[vertex] = True
+            for neigh in self.gr[v]:
+                if not indexes[neigh]:
+                    dfs(neigh)
+                    lowlinks[v] = min(lowlinks[v], lowlinks[neigh])
+                elif in_stack[neigh]:
+                    lowlinks[v] = min(lowlinks[v], indexes[neigh])
 
-            # Обход вершин через поиск в глубину
-            for neighbour_vertex in self.gr[vertex]:
-                if indexes[neighbour_vertex] == 0:
-                    strong_connect(neighbour_vertex)
-                    lowlinks[vertex] = min(lowlinks[vertex], lowlinks[neighbour_vertex])
-                elif in_stack[neighbour_vertex]:
-                    lowlinks[vertex] = min(lowlinks[vertex], indexes[neighbour_vertex])
-
-            # Попали в корень компонента связности, извлекаем вершины потомки
-            if lowlinks[vertex] == indexes[vertex]:
+            if lowlinks[v] == indexes[v]:
                 scc = []
-                neighbour_vertex = None
-                while vertex != neighbour_vertex:
-                    neighbour_vertex = stack.pop()
-                    scc.append(neighbour_vertex)
-                    in_stack[neighbour_vertex] = False
-                strong_components.append(scc)
+                neigh = None
+                while neigh != v:
+                    neigh = st.pop()
+                    in_stack[neigh] = 0
+                    scc.append(neigh)
+                ans.append(scc)
 
-        for asd in self.gr:
-            if indexes[asd] == 0:
-                strong_connect(asd)
- 
-        return strong_components
+        for vert in self.gr:
+            if vert not in indexes:
+                dfs(vert)
+        return ans
 
 
 if __name__ == "__main__":
@@ -62,6 +63,6 @@ if __name__ == "__main__":
         'E': {'F'},
         'F': {'D'},
     }
-    print(gr.find_strong_connected_tarjan())
+    print(gr.tarjan())
 
 
