@@ -1,0 +1,105 @@
+0 0 0 0 0 
+0 0 0 0 0 
+0 0 0 0 0 
+1 0 0 0 0 
+1 0 0 0 0 
+2 0 0 0 0 
+2 0 0 0 0 
+3 1 0 0 0 
+3 1 0 0 0 
+3 1 0 0 0 
+9 3 0 0 0 
+8 3 0 0 0 
+10 9 1 0 0 
+10 9 1 0 0 
+lca of 0 and 1: 0
+lca of 0 and 2: 0
+lca of 0 and 3: 0
+lca of 0 and 4: 0
+lca of 0 and 5: 0
+lca of 0 and 6: 0
+lca of 0 and 7: 0
+lca of 0 and 8: 0
+lca of 0 and 9: 0
+lca of 0 and 10: 0
+lca of 0 and 11: 0
+lca of 0 and 12: 0
+lca of 0 and 13: 0
+lca of 1 and 2: 0
+lca of 1 and 3: 1
+lca of 1 and 4: 1
+lca of 1 and 5: 0
+lca of 1 and 6: 0
+lca of 1 and 7: 1
+lca of 1 and 8: 1
+lca of 1 and 9: 1
+lca of 1 and 10: 1
+lca of 1 and 11: 1
+lca of 1 and 12: 1
+lca of 1 and 13: 1
+lca of 2 and 3: 0
+lca of 2 and 4: 0
+lca of 2 and 5: 2
+lca of 2 and 6: 2
+lca of 2 and 7: 0
+lca of 2 and 8: 0
+lca of 2 and 9: 0
+lca of 2 and 10: 0
+lca of 2 and 11: 0
+lca of 2 and 12: 0
+lca of 2 and 13: 0
+lca of 3 and 4: 1
+lca of 3 and 5: 0
+lca of 3 and 6: 0
+lca of 3 and 7: 3
+lca of 3 and 8: 3
+lca of 3 and 9: 3
+lca of 3 and 10: 3
+lca of 3 and 11: 3
+lca of 3 and 12: 3
+lca of 3 and 13: 3
+lca of 4 and 5: 0
+lca of 4 and 6: 0
+lca of 4 and 7: 1
+lca of 4 and 8: 1
+lca of 4 and 9: 1
+lca of 4 and 10: 1
+lca of 4 and 11: 1
+lca of 4 and 12: 1
+lca of 4 and 13: 1
+lca of 5 and 6: 2
+lca of 5 and 7: 0
+lca of 5 and 8: 0
+lca of 5 and 9: 0
+lca of 5 and 10: 0
+lca of 5 and 11: 0
+lca of 5 and 12: 0
+lca of 5 and 13: 0
+lca of 6 and 7: 0
+lca of 6 and 8: 0
+lca of 6 and 9: 0
+lca of 6 and 10: 0
+lca of 6 and 11: 0
+lca of 6 and 12: 0
+lca of 6 and 13: 0
+lca of 7 and 8: 3
+lca of 7 and 9: 3
+lca of 7 and 10: 3
+lca of 7 and 11: 3
+lca of 7 and 12: 3
+lca of 7 and 13: 3
+lca of 8 and 9: 3
+lca of 8 and 10: 3
+lca of 8 and 11: 8
+lca of 8 and 12: 3
+lca of 8 and 13: 3
+lca of 9 and 10: 9
+lca of 9 and 11: 3
+lca of 9 and 12: 9
+lca of 9 and 13: 9
+lca of 10 and 11: 3
+lca of 10 and 12: 10
+lca of 10 and 13: 10
+lca of 11 and 12: 3
+lca of 11 and 13: 3
+lca of 12 and 13: 10
