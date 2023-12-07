@@ -39,7 +39,7 @@ void Graph::dfs (int v, int p) {
 	up[v][0] = p;
 	for (int i=1; i<=l; ++i)
 		up[v][i] = up[up[v][i-1]][i-1];
-	for (size_t i=0; i<g[v].size(); ++i) {
+	for (int i=0; i<g[v].size(); ++i) {
 		int to = g[v][i];
 		if (to != p)
 			dfs (to, v);

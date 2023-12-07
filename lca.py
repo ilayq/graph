@@ -43,34 +43,6 @@ class Tree(Graph):
             u, v = self.parents[u], self.parents[v]
         return u # or v
         #time == O(h), h - depth of tree
-    # 
-    # def bin_lift_preproc(self):
-    #     n = len(self.gr)
-    #     logn = math.ceil(math.log(n, 2))
-    #     self.up = [[0 for _ in range(logn)] for _ in range(n + 1)]
-    #     for i in range(1, n + 1):
-    #         self.up[i][0] = self.parents[i]
-    #     for i in range(n + 1):
-    #         for j in range(logn):
-    #             self.up[i][j] = self.up[self.up[i][j - 1]][j - 1]
-    #
-    #
-    # def bin_lift_lca(self, v, u):
-    #     if self.depth[v] > self.depth[u]:
-    #         u, v = v, u
-    #     n = len(self.gr)
-    #     logn = math.ceil(math.log(n, 2))
-    #     for i in range(logn, -1, -1):
-    #         if self.depth[self.up[u][i] - self.depth[v]] >= 0:
-    #             u = self.up[u][i]
-    #     if v == u:
-    #         return v 
-    #     for i in range(logn, -1, -1):
-    #         if self.up[v][i] != self.up[u][i]:
-    #             v = self.up[v][i]
-    #             u = self.up[u][i]
-    #     return self.parents[v]
-
 
 if __name__ == "__main__":
     gr = Tree()
